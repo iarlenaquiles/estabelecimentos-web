@@ -3,8 +3,8 @@ import { toast } from 'react-toastify';
 
 import Types from './types';
 
-import api from '~/services/api';
-import history from '~/services/history';
+import api from '../../../services/api';
+import history from '../../../services/history';
 
 import { signFailure, signInSuccess } from './actions';
 
@@ -12,7 +12,7 @@ export function* signIn({ payload }) {
   try {
     const { email, password } = payload;
 
-    const response = yield call(api.post, 'login', {
+    const response = yield call(api.post, '/login', {
       email,
       password
     });
@@ -34,7 +34,7 @@ export function* signUp({ payload }) {
   try {
     const { name, email, password } = payload;
 
-    yield call(api.post, 'users', {
+    yield call(api.post, '/users', {
       name,
       email,
       password
