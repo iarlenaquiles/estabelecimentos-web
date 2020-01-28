@@ -6,16 +6,27 @@ export const Estabelecimento = styled.li`
   border-radius: 2px;
   padding: 20px;
 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   header {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  header img {
-    width: 54px;
-    height: 54px;
+  div strong p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    margin-right: 20px;
   }
 
   strong {
@@ -35,5 +46,6 @@ p {
   font-size: 14px;
   line-height: 20px;
   margin: 10px 0;
+  display: block;
 }
 `;

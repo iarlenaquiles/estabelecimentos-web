@@ -7,18 +7,13 @@ function Estabelecimento({ estabelecimento }) {
   return (
     <Link to={`/details/${estabelecimento._id}`}>
       <S.Estabelecimento>
+        <img src="https://api.adorable.io/avatars/100/abott@adorable.png" alt={estabelecimento.name} />
 
-          <header>
-              <img src={estabelecimento.imagem_url} alt={estabelecimento.name} />
-
-              <div className="estabelecimento-info">
-                <strong>{estabelecimento.name}</strong>
-
-              </div>
-
-          </header>
+        <div>
+          <strong>{estabelecimento.name}</strong>
 
           <p>{estabelecimento.description}</p>
+        </div>
 
       </S.Estabelecimento>
     </Link>
