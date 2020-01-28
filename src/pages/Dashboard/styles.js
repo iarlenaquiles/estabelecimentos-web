@@ -15,7 +15,7 @@ export const Container = styled.div`
 
     strong {
       font-size: 24px;
-      color: #fff;
+      color: #000;
       font-weight: bold;
       font-family: 'Roboto', sans-serif;
     }
@@ -46,7 +46,7 @@ export const Container = styled.div`
       margin-right: 5px;
     }
     strong {
-      color: #fff;
+      color: #000;
       font-size: 24px;
       margin: 0 15px;
     }
