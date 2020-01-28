@@ -17,7 +17,7 @@ function Estabelecimento({ estabelecimento }) {
   return (
       <S.Estabelecimento>
         <S.Aside>
-          <img src="https://api.adorable.io/avatars/100/abott@adorable.png" alt={estabelecimento.name} />
+          <img src={estabelecimento.imagem_url ? estabelecimento.imagem_url : 'https://api.adorable.io/avatars/100/abott@adorable.png'} alt={estabelecimento.name} />
 
           <div>
             <strong>{estabelecimento.name}</strong>
