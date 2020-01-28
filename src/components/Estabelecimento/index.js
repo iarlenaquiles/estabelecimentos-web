@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom';
 import { MdEdit, MdDeleteForever } from 'react-icons/md';
 
 import api from '../../services/api';
+import history from '../../services/history';
 
 import * as S from './styles';
 
-function Estabelecimento({ estabelecimento, history }) {
+function Estabelecimento({ estabelecimento }) {
 
   async function deteleEstabelecimento(id) {
-    await api.delete(`/meetups/${id}`);
+    await api.delete(`/estabelecimentos/${id}`);
     history.push('/dashboard');
   }
 
   return (
-    <Link to={`/details/${estabelecimento._id}`}>
       <S.Estabelecimento>
         <S.Aside>
           <img src="https://api.adorable.io/avatars/100/abott@adorable.png" alt={estabelecimento.name} />
@@ -45,7 +45,6 @@ function Estabelecimento({ estabelecimento, history }) {
         </S.Actions>
 
       </S.Estabelecimento>
-    </Link>
   )
 }
 
