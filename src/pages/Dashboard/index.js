@@ -3,7 +3,7 @@ import { MdAddCircleOutline, MdChevronRight } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
-import { Container, Meetup } from './styles';
+import * as S from './styles';
 import Estabelecimento from '../../components/Estabelecimento';
 
 
@@ -21,7 +21,7 @@ export default function Dashboard() {
   }, [initEstabelecimentos]);
 
   return (
-    <Container>
+    <S.Container>
       <header>
         <strong>Meus estabelecimentos</strong>
         <Link to="/meetup/create">
@@ -37,6 +37,6 @@ export default function Dashboard() {
           <Estabelecimento key={estabelecimento._id} estabelecimento={estabelecimento}/>
         ))}
       </ul>
-    </Container>
+    </S.Container>
   );
 }
