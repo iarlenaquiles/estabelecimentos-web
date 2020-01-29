@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MdEdit, MdDeleteForever } from 'react-icons/md';
-
-import api from '../../services/api';
-import history from '../../services/history';
-
+import PropTypes from  'prop-types';
 import * as S from './styles';
 
 function Estabelecimento({ estabelecimento, onDelete }) {
@@ -43,4 +40,9 @@ function Estabelecimento({ estabelecimento, onDelete }) {
 }
 
 export default Estabelecimento;
+
+Estabelecimento.propTypes = {
+  estabelecimento: PropTypes.object.isRequired,
+  onDelete: PropTypes.func.isRequired,
+};
 
