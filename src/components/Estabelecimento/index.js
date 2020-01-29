@@ -7,13 +7,7 @@ import history from '../../services/history';
 
 import * as S from './styles';
 
-function Estabelecimento({ estabelecimento }) {
-
-  async function deteleEstabelecimento(id) {
-    await api.delete(`/estabelecimentos/${id}`);
-    history.push('/dashboard');
-  }
-
+function Estabelecimento({ estabelecimento, onDelete }) {
   return (
       <S.Estabelecimento>
         <S.Aside>
@@ -37,7 +31,7 @@ function Estabelecimento({ estabelecimento }) {
           <button
             type="button"
             className="cancelar"
-            onClick={() => deteleEstabelecimento(estabelecimento._id)}
+            onClick={onDelete}
           >
             <MdDeleteForever color="#fff" size={20} />
             Deletar
