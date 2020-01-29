@@ -7,6 +7,7 @@ import Signup from '../pages/Signup';
 import Dashboard from '../pages/Dashboard';
 import Estabelecimento from '../pages/Estabelecimento';
 import EstabelecimentoEditar from '../pages/EstabelecimentoEditar';
+import NearStores from '../pages/NearStores';
 
 export default function Routes() {
   return (
@@ -16,6 +17,7 @@ export default function Routes() {
       <Route path="/dashboard" component={Dashboard} isPrivate />
       <Route path="/estabelecimento/create" component={Estabelecimento} isPrivate />
       <Route path="/estabelecimento/edit/:id" component={EstabelecimentoEditar} isPrivate />
+      <Route path="/near-stores" component={NearStores} isPrivate />
     </Switch>
   );
 }
