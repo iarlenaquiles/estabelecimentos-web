@@ -16,6 +16,11 @@ export default function Dashboard() {
     setEstabelecimentos(response.data);
   }, []);
 
+  async function handleDelete(id) {
+    await api.delete(`/estabelecimentos/${id}`);
+    initEstabelecimentos();
+  }
+
   useEffect(() => {
     initEstabelecimentos();
   }, [initEstabelecimentos]);
@@ -24,7 +29,7 @@ export default function Dashboard() {
     <S.Container>
       <header>
         <strong>Meus estabelecimentos</strong>
-        <Link to="/meetup/create">
+        <Link to="/estabelecimento/create">
           <button type="button">
             <MdAddCircleOutline color="#fff" size={20} />
             Novo estabelecimento
@@ -34,7 +39,7 @@ export default function Dashboard() {
 
       <ul>
         {estabelecimentos.map(estabelecimento => (
-          <Estabelecimento key={estabelecimento._id} estabelecimento={estabelecimento}/>
+          <Estabelecimento key={estabelecimento._id} estabelecimento={estabelecimento} onDelete={() => handleDelete(estabelecimento._id)}/>
         ))}
       </ul>
     </S.Container>
