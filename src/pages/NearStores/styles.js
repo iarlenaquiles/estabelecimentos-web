@@ -31,5 +31,24 @@ export const Container = styled.div`
     grid-gap: 15px;
     margin-top: 30px;
   }
+
+  div {
+    p {
+      font-size: 20px;
+      color: #000;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    input {
+      width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+  }
 `;
 

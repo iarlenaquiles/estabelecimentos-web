@@ -38,7 +38,7 @@ export default function NearStores() {
     });
 
     setEstabelecimentos(response.data);
-  }, [latitude, longitude]);
+  }, [latitude, longitude, distance]);
 
   useEffect(() => {
     initEstabelecimentos();
@@ -54,6 +54,9 @@ export default function NearStores() {
       <header>
         <strong>Estabelecimentos próximos</strong>
 
+        <div>
+         <p>Distância em metros:</p> <input type="number" name="distance" value={distance} onChange={e => setDistance(e.target.value)} />
+        </div>
       </header>
 
       <ul>
