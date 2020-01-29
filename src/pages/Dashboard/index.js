@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { MdAddCircleOutline, MdChevronRight } from 'react-icons/md';
+import { MdAddCircleOutline } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
