@@ -1,9 +1,13 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import { signOut } from '../../store/modules/auth/actions'
 import * as S from './styles';
 
 export default function Header() {
+  const dispatch = useDispatch();
+
   return (
     <S.Container>
       <S.Content>
@@ -22,6 +26,10 @@ export default function Header() {
 
             <img src="https://api.adorable.io/avatars/50/abott@adorable.png" alt="Imagem do perfil"/>
           </S.Profile>
+
+          <div>
+            <button onClick={() => dispatch(signOut())}>Sair</button>
+          </div>
         </aside>
       </S.Content>
     </S.Container>
