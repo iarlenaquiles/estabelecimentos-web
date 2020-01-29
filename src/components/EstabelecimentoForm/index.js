@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 function EstabelecimentoForm({ onSubmit }) {
   const [name, setName] = useState('');
@@ -86,3 +87,8 @@ function EstabelecimentoForm({ onSubmit }) {
 }
 
 export default EstabelecimentoForm;
+
+EstabelecimentoForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
+
