@@ -8,7 +8,7 @@ function Estabelecimento({ estabelecimento, onDelete }) {
   return (
       <S.Estabelecimento>
         <S.Aside>
-          <img src={estabelecimento.image_url ? estabelecimento.image_url : 'https://api.adorable.io/avatars/100/abott@adorable.png'} alt={estabelecimento.name} onError={(e)=>{e.target.onerror = null; e.target.src="https://api.adorable.io/avatars/100/abott@adorable.png"}} />
+          <img src={estabelecimento.image_url} alt={estabelecimento.name} onError={(e)=>{e.target.onerror = null; e.target.src="https://api.adorable.io/avatars/100/abott@adorable.png"}} />
 
           <div>
             <strong>{estabelecimento.name}</strong>
