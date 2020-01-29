@@ -9,6 +9,8 @@ export default function Header() {
       <S.Content>
         <nav>
           <Link to="/dashboard">Dashboard</Link>
+
+          <Link to="/near-stores">Lojas próximas</Link>
         </nav>
 
         <aside>
