@@ -1,4 +1,4 @@
-# :computer: Aplicação Web em ReactJS para getenciar estabelecimentos
+# :computer: Aplicação Web em ReactJS para gerenciar estabelecimentos
 
 ![Cena 01](image-01.png)
 
